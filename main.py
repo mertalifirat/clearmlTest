@@ -38,8 +38,7 @@ class Net(nn.Module):
         x = self.fc2(x)
         output = F.log_softmax(x, dim=1)
         return output
-
-
+"""
 def train(args, model, device, train_loader, optimizer, epoch):
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
@@ -55,7 +54,7 @@ def train(args, model, device, train_loader, optimizer, epoch):
                 100. * batch_idx / len(train_loader), loss.item()))
             if args.dry_run:
                 break
-
+"""
 
 def test(model, device, test_loader):
     model.eval()
