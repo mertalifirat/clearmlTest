@@ -11,10 +11,6 @@ from torch.optim.lr_scheduler import StepLR
 import helper
 
 
-####ADDED#########
-from clearml import Task
-task = Task.init(project_name='examples', task_name='hello world')
-##################
 
 
 class Net(nn.Module):
@@ -79,6 +75,11 @@ def test(model, device, test_loader):
 
 
 def main():
+    
+    ####ADDED#########
+    from clearml import Task
+    task = Task.init(project_name='examples', task_name='hello world')
+    ##################
     # Training settings
     parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
     parser.add_argument('--batch-size', type=int, default=64, metavar='N',
