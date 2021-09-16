@@ -1,7 +1,4 @@
-####ADDED#########
-from clearml import Task
-task = Task.init(project_name='examples', task_name='hello world')
-##################
+
 
 from __future__ import print_function
 import argparse
@@ -12,6 +9,12 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 import helper
+
+
+####ADDED#########
+from clearml import Task
+task = Task.init(project_name='examples', task_name='hello world')
+##################
 
 
 class Net(nn.Module):
