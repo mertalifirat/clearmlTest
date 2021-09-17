@@ -10,8 +10,8 @@ from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 from helper import train
 ####ADDED#########
-    from clearml import Task
-    task = Task.init(project_name='examples', task_name='hello world')
+from clearml import Task
+task = Task.init(project_name='examples', task_name='hello world')
 ##################
 
 
