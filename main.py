@@ -9,7 +9,10 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 from helper import train
-
+####ADDED#########
+    from clearml import Task
+    task = Task.init(project_name='examples', task_name='hello world')
+##################
 
 
 
@@ -76,10 +79,7 @@ def test(model, device, test_loader):
 
 def main():
     
-    ####ADDED#########
-    from clearml import Task
-    task = Task.init(project_name='examples', task_name='hello world')
-    ##################
+    
     # Training settings
     parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
     parser.add_argument('--batch-size', type=int, default=64, metavar='N',
