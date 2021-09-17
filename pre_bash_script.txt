@@ -1,3 +1,4 @@
 nvidia-smi
 pip --version
 python --version
+pip install -e /mnt/clearML/clearml
